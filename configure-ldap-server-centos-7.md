@@ -264,49 +264,28 @@ grep /etc/group as /root/user
 ＃ldapsearch -x cn=user2 -b dc=jt,dc=com
 ```
 
-样品输出
+输出
 
 ```
-＃扩展LDIF
-
-＃
-
-＃LDAPv3
-
-＃base 
-<
-dc = jt，dc = com
->
- with scope subtree
-
-＃filter：cn = user2
-
-＃请求：ALL
-
-＃
-
-＃user2，Group，jt.com
-
-dn：cn = user2，ou = Group，dc = jt，dc = com
-
-objectClass：posixGroup
-
-objectClass：top
-
-cn：user2
-
-userPassword :: e2NyeXB0fXg =
-
-gidNumber：1002
-
-＃ 搜索结果
-
-搜索：2
-结果：0成功
-
-＃numResponses：2
-
-＃numEntries：1
+# extended LDIF
+#
+# LDAPv3
+# base <dc=jt,dc=com> with scope subtree
+# filter: cn=user2
+# requesting: ALL
+#
+# user2, Group, jt.com
+dn: cn=user2,ou=Group,dc=jt,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: user2
+userPassword:: e2NyeXB0fXg=
+gidNumber: 1002
+# search result
+search: 2
+result: 0 Success
+# numResponses: 2
+# numEntries: 1
 ```
 
 Success消息表示服务器配置成功。
