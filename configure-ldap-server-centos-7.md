@@ -238,7 +238,7 @@ grep /etc/group as /root/user
 
 ![](/assets/6-2.png)迁移/root/group文件到 /root/groups.ldif
 
-＃./migrate\_group.pl /root/group /root/groups.ldif
+＃ ./migrate\_group.pl /root/group /root/groups.ldif
 
 **Groups.ldif**将看起来像
 
@@ -251,9 +251,9 @@ grep /etc/group as /root/user
 使用以下命令将所有三个.ldif文件导入LDAP，并输入密码，然后按Enter键
 
 ```
-# ldapadd -x -W -D "cn=Manager,dc=jt,dc=com" -f /root/base.ldif
-# ldapadd -x -W -D "cn=Manager,dc=jt,dc=com" -f /root/users.ldif
-# ldapadd -x -W -D "cn=Manager,dc=jt,dc=com" -f /root/groups.ldif
+# ldapadd -x -W -D "cn=Manager,dc=oids,dc=cn" -f /root/base.ldif
+# ldapadd -x -W -D "cn=Manager,dc=oids,dc=cn" -f /root/users.ldif
+# ldapadd -x -W -D "cn=Manager,dc=oids,dc=cn" -f /root/groups.ldif
 ```
 
 输出![](/assets/8-1.png)8.运行配置测试
@@ -261,7 +261,7 @@ grep /etc/group as /root/user
 用户广告组已迁移到LDAP，让我们检查事情是否正确完成，
 
 ```
-＃ldapsearch -x cn=user2 -b dc=jt,dc=com
+＃ldapsearch -x cn=user2 -b dc=oids,dc=cn
 ```
 
 输出
@@ -275,7 +275,7 @@ grep /etc/group as /root/user
 # requesting: ALL
 #
 # user2, Group, jt.com
-dn: cn=user2,ou=Group,dc=jt,dc=com
+dn: cn=user2,ou=Group,dc=oids,dc=cn
 objectClass: posixGroup
 objectClass: top
 cn: user2
