@@ -80,7 +80,7 @@
 
 ```
 ＃cd /etc/openldap/slapd.d/cn=config
- 
+
 
 我们需要在此目录中编辑以下两个文件。
 ```
@@ -97,7 +97,7 @@ olcDatabase = {2} hdb.ldif
 ＃vim olcDatabase = {2} hdb.ldif
 ```
 
-在下面提供您的域凭据，替换您的设置。寻找 **olcRootPW：**  语法和粘贴ldap密码值。
+在下面提供您的域凭据，替换您的设置。寻找 **olcRootPW：**  语法和粘贴ldap密码值。
 
 ```
 ＃自动生成的文件 - 不要编辑！
@@ -117,7 +117,7 @@ olcDbDirectory：/ var / lib / ldap
 
 olcSuffix：
 dc = jt，dc = com ###定义doamin控制器
- 
+
 olcRootDN：
 cn = Manager
 ，
@@ -143,7 +143,7 @@ modifyTimestamp：20160728103939Z
 olcRootPW：{SSHA} r + op2tBDH5joBt14e0lVCnuUR0KnEWRt ###粘贴生成的passwod在上述步骤中生成
 ```
 
-编辑olcDatabase \ = \ {1 \} monitor.ldif文件。
+编辑olcDatabase  =  {1 } monitor.ldif文件。
 
 ```
 ＃vim olcDatabase \ = \ {1 \} monitor.ldif
@@ -256,7 +256,7 @@ $ DEFAULT_MAIL_DOMAIN =“jt.com”
 $ DEFAULT_BASE =“dc = jt，dc = com”;
 ```
 
-保存并退出，创建base.ldif文件，将该文件保存到/ root /目录下，使用** migration\_base.pl** 生成.ldif文件。
+保存并退出，创建base.ldif文件，将该文件保存到/ root /目录下，使用** migration\_base.pl** 生成.ldif文件。
 
 ```
 ＃./migrate_base.pl /root/base.ldif
@@ -366,4 +366,8 @@ Success消息表示服务器配置成功。
 ### 结论
 
 我们创建了一个功能齐全的LDAP服务，可以在各种目录服务中使用。
+
+
+
+原文链接：[http://www.jointux.com/configure-ldap-server-centos-7/](http://www.jointux.com/configure-ldap-server-centos-7/)
 
