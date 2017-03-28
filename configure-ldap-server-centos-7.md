@@ -19,19 +19,19 @@
 更新系统
 
 ```
-＃yum更新
+# yum update
 ```
 
 #### 2.使用yum安装所需的openldap包
 
 ```
-＃yum install * openldap *
+＃yum install *openldap*
 ```
 
 定义服务器的主机名
 
 ```
-#nmtui
+# nmtui
 ```
 
 ![](/assets/1-1.png)
@@ -54,9 +54,7 @@
 ＃netstat -ntl
 ```
 
-样品输出
-
-![](/assets/9-1.png)
+输出![](/assets/9-1.png)
 
 生成ldap密码
 
@@ -366,8 +364,6 @@ Success消息表示服务器配置成功。
 ### 结论
 
 我们创建了一个功能齐全的LDAP服务，可以在各种目录服务中使用。
-
-
 
 原文链接：[http://www.jointux.com/configure-ldap-server-centos-7/](http://www.jointux.com/configure-ldap-server-centos-7/)
 
