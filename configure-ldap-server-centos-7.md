@@ -65,11 +65,9 @@
 生成密码并复制
 
 ```
-新密码：
-
-重新输入新的密码：
-
-{SSHA} WMRCQ + / NZ + T0Lml78e4bnU / 88UGybpFP
+New password:
+Re-enter new password:
+{SSHA}WMRcQ+/NZ+T0Lml78e4bnU/88UGybpFP
 ```
 
 #### 3.编辑打开LDAP配置文件
@@ -84,67 +82,47 @@
 ```
 
 ```
-olcDatabase = {1} monitor.ldif
-
-olcDatabase = {2} hdb.ldif
+olcDatabase={1}monitor.ldif
+olcDatabase={2}hdb.ldif
 ```
 
 首先编辑olc数据库文件
 
 ```
-＃vim olcDatabase = {2} hdb.ldif
+＃vim olcDatabase={2}hdb.ldif
 ```
 
 在下面提供您的域凭据，替换您的设置。寻找 **olcRootPW：**  语法和粘贴ldap密码值。
 
 ```
-＃自动生成的文件 - 不要编辑！
-使用ldapmodify
+##自动生成的文件 - 不要编辑！使用ldapmodify
+##========================================
 
-＃CRC32 57ead3ba1111
-
-dn：olcDatabase = {2} hdb
-
-objectClass：olcDatabaseConfig
-
-objectClass：olcHdbConfig
-
-olcDatabase：{2} hdb
-
-olcDbDirectory：/ var / lib / ldap
-
-olcSuffix：
-dc = jt，dc = com ###定义doamin控制器
-
-olcRootDN：
-cn = Manager
-，
-dc = jt，dc = com ###定义域控制器的Distingush名称
-
-olcDbIndex：objectClass eq，pres
-
-olcDbIndex：ou，cn，mail，surname，givenname eq，pres，sub
-
-structuralObjectClass：olcHdbConfig
-
-entryUUID：548fbb00-e8fb-1035-8d76-b38427b6950e
-
-creatorsName：cn = config
-
-createTimestamp：20160728103939Z
-
-entryCSN：20160728103939.380569Z＃000000＃000＃000000
-
-modifiersName：cn = config
-
-modifyTimestamp：20160728103939Z
-olcRootPW：{SSHA} r + op2tBDH5joBt14e0lVCnuUR0KnEWRt ###粘贴生成的passwod在上述步骤中生成
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 57ead3ba1111
+dn: olcDatabase={2}hdb
+objectClass: olcDatabaseConfig
+objectClass: olcHdbConfig
+olcDatabase: {2}hdb
+olcDbDirectory: /var/lib/ldap
+olcSuffix: dc=jt,dc=com  ###Define doamin controller 
+olcRootDN: cn=Manager,dc=jt,dc=com ###Define Distingush name for domain controller
+olcDbIndex: objectClass eq,pres
+olcDbIndex: ou,cn,mail,surname,givenname eq,pres,sub
+structuralObjectClass: olcHdbConfig
+entryUUID: 548fbb00-e8fb-1035-8d76-b38427b6950e
+creatorsName: cn=config
+createTimestamp: 20160728103939Z
+entryCSN: 20160728103939.380569Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20160728103939Z
+olcRootPW: {SSHA}r+op2tBDH5joBt14e0lVCnuUR0KnEWRt ###Paste generated passwod generated in above step
 ```
 
-编辑olcDatabase  =  {1 } monitor.ldif文件。
+编辑 olcDatabase\=\{1\}monitor.ldif 文件。
 
 ```
-＃vim olcDatabase \ = \ {1 \} monitor.ldif
+＃vim olcDatabase\=\{1\}monitor.ldif
 ```
 
 定义您的域值
