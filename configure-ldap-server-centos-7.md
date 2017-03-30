@@ -213,7 +213,7 @@ modifyTimestamp: 20160728103939Z
 保存并退出，创建base.ldif文件，将该文件保存到 /root/ 目录下，使用** migration\_base.pl** 生成.ldif文件。
 
 ```
-＃./migrate_base.pl /root/base.ldif
+＃./migrate_base.pl >> /root/base.ldif
 ```
 
 grep /etc/passwd 到 /root 目录，在/root 中将文件另存为 'passwd'
