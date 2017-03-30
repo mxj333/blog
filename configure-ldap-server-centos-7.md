@@ -67,7 +67,7 @@
 ```
 New password:
 Re-enter new password:
-{SSHA}WMRcQ+/NZ+T0Lml78e4bnU/88UGybpFP
+{SSHA}rWtw+rJBgz+4WpKYmeRihmCPF8sjtF4R
 ```
 
 #### 3.编辑打开LDAP配置文件
