@@ -1,4 +1,4 @@
-# I18N壳牌
+# I18N Shell
 
 CakePHP的i18n功能使用[po文件](http://en.wikipedia.org/wiki/GNU_gettext)作为其翻译来源。PO文件与常用的翻译工具（如[Poedit）集成在一起](http://www.poedit.net/)。
 
@@ -11,8 +11,6 @@ i18n外壳提供了一种快速简单的方式来生成po模板文件。然后�
 ```
 bin/cake i18n extract
 ```
-
-
 
 以上将运行提取shell。此命令的结果将是文件**src / Locale / default.pot**。您可以使用pot文件作为创建po文件的模板。如果您正在从锅文件手动创建po文件，请确保正确设置`Plural-Forms`标题行。
 
